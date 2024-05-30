@@ -15,6 +15,9 @@ import javax.persistence.Transient;
 
 
 
+
+
+
 @Entity
 @Table
 (name = "productos")
