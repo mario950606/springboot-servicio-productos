@@ -22,8 +22,23 @@ public class ProductoServiceImpl implements IProductoService{
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public Producto finById(Long id) {
 		return productoDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Producto save(Producto producto) {
+		// TODO Auto-generated method stub
+		return productoDao.save(producto);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(Long id) {
+		// TODO Auto-generated method stub
+		productoDao.deleteById(id);
 	}
 
 }

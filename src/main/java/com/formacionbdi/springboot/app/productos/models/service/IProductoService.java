@@ -10,4 +10,8 @@ public interface IProductoService {
 	
 	public Producto finById(Long id);
 	
+	public Producto save(Producto producto);
+	
+	public void deleteById(Long id);
+	
 }
